@@ -1,1 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Gold Oladele Morenikeji!</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
+    <canvas id="fx-canvas"></canvas>
+
+    <!-- Welcome Landing Overlay -->
+    <div id="welcome-overlay">
+        <h2 class="welcome-title">🎁 Royal Celebration Ahead...</h2>
+        <p class="welcome-subtitle">
+            A special birthday page dedicated to Gold Oladele Morenikeji
+        </p>
+        <button class="btn-enter" onclick="enterSite()">
+            Unwrap Birthday Page ✨
+        </button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container" id="main-content">
+
+        <h1>Happy Birthday, Gold!</h1>
+
+        <p class="names">
+            Celebrating the extraordinary
+            <span>Gold Oladele Morenikeji</span>! ✨
+        </p>
+
+        <!-- Navigation -->
+        <div class="nav-tabs">
+
+            <button class="tab-btn active"
+                onclick="switchTab(event,'tab-letter')">
+                📜 Royal Birthday Letter
+            </button>
+
+            <button class="tab-btn"
+                onclick="switchTab(event,'tab-wishes')">
+                💖 Name Blessings
+            </button>
+
+            <button class="tab-btn"
+                onclick="switchTab(event,'tab-cake')">
+                🎂 Interactive Cake
+            </button>
+
+            <button class="tab-btn"
+                onclick="switchTab(event,'tab-gallery')">
+                📸 Memory Gallery
+            </button>
+
+        </div>
+
+        <!-- TAB 1 -->
+        <div id="tab-letter" class="tab-content active">
+
+            <div class="letter-card">
+
+                <h2>👑 Dearest Gold Oladele Morenikeji,</h2>
+
+                <p>
+                    Today is an extraordinary milestone!
+                    Having you as a sister is one of life's
+                    absolute greatest blessings.
+                </p>
+
+                <p>
+                    You bring an irreplaceable shine
+                    into every room you enter,
+                    living up to your beautiful name
+                    <strong>Gold</strong>.
+                </p>
+
+                <p>
+                    As <strong>Oladele</strong>,
+                    may honour, favour,
+                    and prosperity never depart from you.
+                </p>
+
+                <p>
+                    As <strong>Morenikeji</strong>,
+                    may you always remain loved,
+                    cherished and celebrated.
+                </p>
+
+                <p>
+                    Happy Birthday once again.
+                    May God bless you with long life,
+                    good health,
+                    peace,
+                    happiness,
+                    success
+                    and endless breakthroughs.
+                </p>
+
+                <p
+                    style="
+                    text-align:right;
+                    font-weight:bold;
+                    color:var(--primary);
+                    ">
+
+                    With all my love ❤️
+                    <br>
+                    Your Family 🥂✨
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- TAB 2 -->
+        <div id="tab-wishes" class="tab-content">
+
+            <h2
+            style="
+            color:var(--primary);
+            margin-bottom:20px;
+            ">
+                Click Each Card to Reveal the Blessing
+            </h2>
+
+            <div class="accordion"
+                onclick="toggleAccordion(this)">
+
+                <div class="accordion-header">
+                    <span>
+                        ✨ Gold:
+                        Pure Radiance &
+                        Eternal Value
+                    </span>
+
+                    <span>▼</span>
+                </div>
+
+                <div class="accordion-body">
+
+                    Like pure gold,
+                    may your worth continue
+                    to shine forever.
+
+                </div>
+
+            </div>
+
+            <div class="accordion"
+                onclick="toggleAccordion(this)">
+
+                <div class="accordion-header">
+                    <span>
+                        👑 Oladele:
+                        Honour &
+                        Wealth
+                    </span>
+
+                    <span>▼</span>
+                </div>
+
+                <div class="accordion-body">
+
+                    May honour,
+                    wealth,
+                    favour
+                    and promotion
+                    locate you every day.
+
+                </div>
+
+            </div>
+
+            <div class="accordion"
+                onclick="toggleAccordion(this)">
+
+                <div class="accordion-header">
+
+                    <span>
+
+                        💖 Morenikeji:
+                        Forever Cherished
+
+                    </span>
+
+                    <span>▼</span>
+
+                </div>
+
+                <div class="accordion-body">
+
+                    May your life
+                    always be surrounded
+                    by genuine love,
+                    peace,
+                    joy,
+                    and happiness.
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- TAB 3 -->
+        <div id="tab-cake"
+            class="tab-content">
+
+            <div class="letter-card"
+                style="text-align:center;">
+
+                <h2
+                style="color:var(--primary);">
+
+                    Make A Wish &
+                    Blow The Candle
+
+                </h2>
+
+                <div
+                    class="cake-container"
+                    onclick="toggleFlame()">
+
+                    <div class="candle">
+                        <div
+                            class="flame"
+                            id="flame">
+                        </div>
+                    </div>
+
+                    <div class="cake"></div>
+
+                </div>
+
+                <p class="hint">
+                    Click the candle
+                    to blow it out.
+                </p>
+
+                <button
+                    class="btn-enter"
+                    style="
+                    margin-top:20px;
+                    font-size:1rem;
+                    padding:12px 25px;
+                    "
+                    onclick="triggerCelebration()">
+
+                    Trigger Fireworks 🎉
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- TAB 4 -->
+        <div
+            id="tab-gallery"
+            class="tab-content">
+
+            <div class="gallery-box">
+
+                <h2
+                style="
+                color:var(--primary);
+                margin-bottom:15px;
+                ">
+
+                    Golden Moments
+
+                </h2>
+
+                <div
+                    class="photo-frame"
+                    id="photo-display">
+
+                    <span>📷</span>
+
+                    <span>
+                        Celebrating
+                        Gold Oladele Morenikeji
+                    </span>
+
+                </div>
+
+                <input
+                    type="file"
+                    id="photo-input"
+                    accept="image/*"
+                    style="display:none;"
+                    onchange="loadPhoto(event)">
+
+                <button
+                    class="tab-btn"
+                    onclick="document.getElementById('photo-input').click()">
+
+                    Upload Photo 🖼️
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <audio
+        id="bg-music"
+        loop
+        src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8c8a7322d.mp3?filename=happy-birthday-155461.mp3">
+    </audio>
+
+    <button
+        class="audio-btn"
+        onclick="toggleAudio()"
+        id="audio-ctrl">
+        🎵 Music On / Off
+    </button>
+
+    <script src="js/confetti.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+                  </html>
